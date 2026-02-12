@@ -1,0 +1,23 @@
+.sort-by {
+    background-color: #c471f5;
+}
+
+.filter-control {
+    background-color: rgb(220, 145, 255) !important;
+    color: white !important;
+    border-color: rgb(220, 145, 255) !important;
+}
+
+.filter-control::placeholder {
+    color: white;
+}
+
+.filter-control .bi {
+    color: white;
+}
+
+.filter-control:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(220, 145, 255);
+}

@@ -10,15 +10,15 @@ const renderStars = (count) => {
 
     for (let i = 0; i < 5; i++) {
         let starImage;
-        // filled or empty
+
         if (i < count) {
-            // filled star 
+
             starImage = starColor;
         } else {
-            //  empty star
+
             starImage = starGray;
         }
-        // Add the star image
+
         stars.push(
             <Image
                 src={starImage}
@@ -31,17 +31,45 @@ const renderStars = (count) => {
     return stars;
 };
 
-const VideoPart = () => {
+const VideoPart = ({ filters = {} }) => {
+    // Apply filters
+    let filteredVideos = tutorials;
+
+    // Filter by search
+    if (filters.search) {
+        const searchLower = filters.search.toLowerCase();
+        filteredVideos = filteredVideos.filter(
+            (video) =>
+                video.title.toLowerCase().includes(searchLower) ||
+                video.text.toLowerCase().includes(searchLower) ||
+                video.author.toLowerCase().includes(searchLower)
+        );
+    }
+
+    // Filter by level
+    if (filters.level && filters.level !== "All") {
+        filteredVideos = filteredVideos.filter(
+            (video) => video.level === filters.level
+        );
+    }
+
+    // Sort videos
+    if (filters.sort === "Most Recent") {
+        filteredVideos = [...filteredVideos].reverse();
+    } else if (filters.sort === "Most Viewed") {
+        filteredVideos = [...filteredVideos].sort((a, b) => b.stars - a.stars);
+    }
+    // "Most Popular" is the default order
 
     return (
         <section className="py-5 position-relative">
             <Container className="py-4">
-                <h5 className="mb-5 text-muted">{tutorials.length} videos</h5>
+                <h5 className="mb-5 text-muted">{filteredVideos.length} videos</h5>
                 <div className="d-flex align-items-center position-relative">
-                    {/* Cards */}
+
                     <Row className="g-4" >
-                        {tutorials.map((tutorial) => (
-                            <Col md={3} >
+                        {filteredVideos.map((tutorial, index) => (
+                            <Col xs={12} sm={6} md={4} lg={3} key={index}>
                                 <Card className="bg-white shadow-sm">
                                     <div className="position-relative overflow-hidden rounded-top">
                                         <Image

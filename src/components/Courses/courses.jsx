@@ -2,6 +2,7 @@ import { Container, Button} from "react-bootstrap";
 import "./courses.css";
 import "../../index.css";
 
+
 const CoursesP = () => {
     return (
         <>

@@ -14,6 +14,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 4,
+        level: "Novice",
     },
     {
         thumb: sad,
@@ -23,6 +24,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 2,
+        level: "Intermediate",
     },
     {
         thumb: natural,
@@ -32,6 +34,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 4,
+        level: "Expert",
     },
     {
         thumb: happy,
@@ -41,6 +44,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 5,
+        level: "Novice",
     },
     {
         thumb: diagonal,
@@ -50,6 +54,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 5,
+        level: "Intermediate",
     },
     {
         thumb: happy,
@@ -59,6 +64,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 5,
+        level: "Expert",
     },
     {
         thumb: diagonal,
@@ -68,6 +74,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 5,
+        level: "Novice",
     },
     {
         thumb: happy,
@@ -77,6 +84,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 5,
+        level: "Intermediate",
     },
     {
         thumb: happy,
@@ -86,6 +94,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 5,
+        level: "Expert",
     },
     {
         thumb: happy,
@@ -95,6 +104,7 @@ const tutorials = [
         authorPic: profile,
         duration: "8 min",
         stars: 5,
+        level: "Novice",
     },
 ];
 export default tutorials;

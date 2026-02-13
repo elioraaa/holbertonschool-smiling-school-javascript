@@ -2,7 +2,19 @@ import { Container, Row, Col, Form, Dropdown, InputGroup } from "react-bootstrap
 import "./sortby.css";
 import { Search } from 'react-bootstrap-icons';
 
-const VideoFilter = () => {
+const VideoFilter = ({ filters, onFilterChange }) => {
+    const handleSearchChange = (e) => {
+        onFilterChange({ ...filters, search: e.target.value });
+    };
+
+    const handleLevelChange = (e) => {
+        onFilterChange({ ...filters, level: e.target.value });
+    };
+
+    const handleSortChange = (e) => {
+        onFilterChange({ ...filters, sort: e.target.value });
+    };
+
     return (
         <section className="py-4 sort-by">
             <Container>
@@ -17,28 +29,35 @@ const VideoFilter = () => {
                                 placeholder="Search by keywords"
                                 className="border-start-0 filter-control"
                                 size="lg"
+                                value={filters.search}
+                                onChange={handleSearchChange}
                             />
                         </InputGroup>
                     </Col>
 
 
-                    {/*  dropdown 1 */}
+
                     <Col xs={12} sm={8} md={6} lg={4}>
                         <Form.Select
                             className="filter-control  rounded"
                             size="lg"
+                            value={filters.level}
+                            onChange={handleLevelChange}
                         >
+                            <option>All</option>
                             <option>Novice</option>
                             <option>Intermediate</option>
                             <option>Expert</option>
                         </Form.Select>
                     </Col>
 
-                    {/* dropdown 2 */}
+
                     <Col xs={12} sm={8} md={6} lg={4}>
                         <Form.Select
                             className="filter-control rounded"
                             size="lg"
+                            value={filters.sort}
+                            onChange={handleSortChange}
                         >
                             <option>Most Popular</option>
                             <option>Most Recent</option>

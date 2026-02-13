@@ -41,7 +41,7 @@ const Testimonial = () => {
     return (
         <section className="bg-color text-white py-5 ">
             <Container className="position-relative">
-                {/* Left Arrow */}
+          
                 <Button
                     variant="link"
                     onClick={prevTestimonial}
@@ -69,7 +69,7 @@ const Testimonial = () => {
                     </Col>
                 </Row>
 
-                {/* Right Arrow */}
+           
                 <Button
                     variant="link"
                     onClick={nextTestimonial}

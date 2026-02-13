@@ -9,7 +9,7 @@ const Footer = () => {
         <footer className="footer text-white py-5">
             <Container>
                 <Row className="align-items-center py-5">
-                    {/* Logo */}
+                
                     <Col md={6}>
                         <img
                             src={logo}
@@ -25,7 +25,7 @@ const Footer = () => {
                         />
                     </Col>
 
-                    {/* Social icons */}
+              
                     <Col md={6} className="text-md-end">
                         <a href="https://www.facebook.com/" className="footer-icon">
                             <Facebook size={20} />

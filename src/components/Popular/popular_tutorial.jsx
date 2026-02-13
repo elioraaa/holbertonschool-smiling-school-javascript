@@ -14,15 +14,15 @@ const renderStars = (count) => {
 
     for (let i = 0; i < 5; i++) {
         let starImage;
-        // filled or empty
+  
         if (i < count) {
-            // filled star 
+        
             starImage = starColor;
         } else {
-            //  empty star
+       
             starImage = starGray;
         }
-        // Add the star image the array
+      
         stars.push(
             <Image
                 src={starImage}
@@ -70,7 +70,7 @@ const PopularTutorials = () => {
                         <Image src={arrowLeft} alt="Previous" width={30} />
                     </Button>
 
-                    {/* Cards */}
+                  
                     <Row xs={1} md={2}  className="g-4" >
                         {visibleTutorials.map((tutorial) => (
                             <Col md={3} >
@@ -106,7 +106,7 @@ const PopularTutorials = () => {
                         ))}
                     </Row>
 
-                    {/* Right arrow */}
+                 
                     <Button
                         variant="link"
                         onClick={next}

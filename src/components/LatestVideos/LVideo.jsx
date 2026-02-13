@@ -11,15 +11,15 @@ const renderStars = (count) => {
 
     for (let i = 0; i < 5; i++) {
         let starImage;
-        // filled or empty
+ 
         if (i < count) {
-            // filled star
+  
             starImage = starColor;
         } else {
-            //  empty star
+   
             starImage = starGray;
         }
-        // Add the star image the array
+   
         stars.push(
             <Image
                 src={starImage}

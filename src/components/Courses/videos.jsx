@@ -32,10 +32,10 @@ const renderStars = (count) => {
 };
 
 const VideoPart = ({ filters = {} }) => {
-    // Apply filters
+   
     let filteredVideos = tutorials;
 
-    // Filter by search
+   
     if (filters.search) {
         const searchLower = filters.search.toLowerCase();
         filteredVideos = filteredVideos.filter(
@@ -46,20 +46,20 @@ const VideoPart = ({ filters = {} }) => {
         );
     }
 
-    // Filter by level
+ 
     if (filters.level && filters.level !== "All") {
         filteredVideos = filteredVideos.filter(
             (video) => video.level === filters.level
         );
     }
 
-    // Sort videos
+
     if (filters.sort === "Most Recent") {
         filteredVideos = [...filteredVideos].reverse();
     } else if (filters.sort === "Most Viewed") {
         filteredVideos = [...filteredVideos].sort((a, b) => b.stars - a.stars);
     }
-    // "Most Popular" is the default order
+ 
 
     return (
         <section className="py-5 position-relative">
